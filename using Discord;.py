@@ -1,5 +1,6 @@
 import discord
 import random
+import os
 from discord.ext import commands
 
 INTENTS = discord.Intents.all()
@@ -72,4 +73,5 @@ async def pick_random_members(ctx, num_winners: int):
 
 # 디스코드 봇 토큰을 사용하여 봇 로그인
 # 여기에는 본인이 발급받은 디스코드 봇 토큰을 입력해야 합니다.
-bot.run('MTIyNzQ1MDgwMjE0MzIzNjE4OA.GxbnP2.ESjvrMUoV4Lr0teErbqefaEUq3mY3MXA4opnoM') 
+access_token = os.environ["BOT_TOKEN"]
+bot.run('access_token') 
